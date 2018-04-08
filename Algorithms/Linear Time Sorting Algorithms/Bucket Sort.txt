@@ -1,7 +1,10 @@
-Bucket sort is a linear time sorting algorithm .As the name implies and you have definitely guessed it .It uses buckets to sort the input sequence.
+Bucket sort is a linear time sorting algorithm .As the name implies and you have definitely guessed it .It uses buckets to sort the
+input sequence.
 Bucket sort is used in specific situations .Situations in which the input sequence is alredy known or the range of the sequence is known .
-Such as {1,0,4,7,3,9,6  } This sequence which has all the numbers between 0 and 9 which means it is well dispersed .So can be implemented using an simple array  where you map every input value to a index and put there .
-but what if we have  duplicates  that why we use bucket sort .Then every bucket can be sorted using insertion sort which also can achieve o(n) sorting time .
+Such as {1,0,4,7,3,9,6  } This sequence which has all the numbers between 0 and 9 which means it is well dispersed .So can be implemented 
+using an simple array  where you map every input value to a index and put there .
+but what if we have  duplicates  that why we use bucket sort .Then every bucket can be sorted using insertion sort which also can achieve 
+o(n) sorting time .
 
 pseudo Code :
 
