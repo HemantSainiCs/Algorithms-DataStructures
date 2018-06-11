@@ -1,0 +1,42 @@
+//array declaring using new and {} are same but the differnece is using new you can assin and return new array but not using {}
+//when input is prededined or of some predefined range 
+//bucket sort complexity is o(k+n) where n is length of input sequence and k is no. of buckets 
+import java.util.*;
+
+public class BucketSort
+{
+	public static void main(String args[])
+	{
+		double arr[]={0.1,0.1,0.2,0.3,0.1,0.1,0.2,0.3,0.1,0.1,0.2,0.3};
+		List<Double>[] list=sort(arr,arr.length);
+		for(int i=0;i<arr.length;i++)
+		{
+			if(list[i]!=null)
+			list[i].forEach(System.out::println);
+		}
+	}
+	public static List<Double>[] sort(double arr[],int n)
+	{
+		List<Double> [] list=new List[n];
+		for(int i=0;i<n;i++)
+		
+		{
+			int ind=n*(int)arr[i];
+			if(list[ind]==null)
+			{
+				list[ind]=new LinkedList<>();
+				list[ind].add(arr[i]);
+			}
+			else
+				list[ind].add(arr[i]);
+		}
+
+		for(int i=0;i<n;i++)
+		{
+			if(list[i]!=null)
+			Collections.sort(list[i]);
+		}
+
+		return list;
+	}
+}

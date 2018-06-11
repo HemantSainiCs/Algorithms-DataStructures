@@ -1,0 +1,30 @@
+import java.util.Scanner ;
+
+class Main
+{
+	public static void main()
+	{
+		int val[] = new int[]{60, 100, 120};
+        int wt[] = new int[]{10, 20, 30};
+        int n=val.length;
+        int w=50;
+        Main m=new Main();
+        System.out.println(m.knapsack(wt,val,n+1,w+1));
+	}
+	public int knapsack(int w[] ,int v[],int n,int w)
+		{
+            if(w==0 || n==0 )
+            	return 0;
+            
+            int val=0;
+            if(w[n-1]>w)
+            {
+            	 return  knapsack(w[],v[],n-1,w);
+            }
+            else 
+            {
+             return Math.max(v[n-1]+knapsack(w[],v[],n-1,w-w[n-1]),knapsack(w[],v[],n-1,w);
+        	}	
+
+		} 
+}
