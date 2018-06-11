@@ -1,0 +1,28 @@
+import java.util.*;
+
+class counting_sort
+{
+	public static void main(String args[])
+	{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	//ArrayList<Integer,ArrayList<Integer>> ar=new ArrayList<Integer,ArrayList<Integer>>();
+	TreeMap<Integer,Integer> ts=new TreeMap<Integer,Integer>();
+ 	for(int i=0;i<n;i++)
+	{
+		int a=sc.nextInt();
+		if(ts.containsKey(a))
+			ts.put(a,ts.get(a)+1);
+		else 
+			{	ts.put(a,1);
+		}
+	}
+	for(Map.Entry<Integer,Integer> entry :ts.entrySet())
+	{
+		for(int i=0;i<entry.getValue();i++)
+			System.out.println(entry.getKey());
+	}
+
+}
+}
